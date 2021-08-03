@@ -60,11 +60,11 @@ class Test:
 
     def test_delete_member(self):
         '''删除成员'''
-        userid = '0803csry03'
-        name = '0803更改测试人员03'
-        mobile = '13610000003'
+        userid = '0803csry04'
+        name = '0803更改测试人员04'
+        mobile = '13610000004'
         department = 1
         self.create_member(userid,name,mobile,department)
-        url = f'https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token={self.token}&userid={userid}'
-        r = requests.get(url,verify=False).json()
-        print(r['errmsg'])
+        # url = f'https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token={self.token}&userid={userid}'
+        # r = requests.get(url,verify=False).json()
+        # print(r['errmsg'])
