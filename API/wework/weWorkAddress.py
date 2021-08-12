@@ -4,7 +4,7 @@
 # @Author  : zc
 # @File    : weWorkAddress.py
 
-from wework.base import Base
+from API.wework import Base
 
 
 class WeWorkAddress(Base):

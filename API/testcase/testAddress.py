@@ -5,7 +5,7 @@
 # @File    : testAddress.py
 import pytest
 
-from wework.weWorkAddress import WeWorkAddress
+from API.wework import WeWorkAddress
 
 
 class TestAddress:
