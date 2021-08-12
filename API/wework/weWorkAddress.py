@@ -3,7 +3,6 @@
 # @Time    : 2021/08/03 11:18
 # @Author  : zc
 # @File    : weWorkAddress.py
-import requests
 
 from API.wework.base import Base
 
