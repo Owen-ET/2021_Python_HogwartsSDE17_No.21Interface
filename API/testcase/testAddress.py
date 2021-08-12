@@ -4,10 +4,10 @@
 # @Author  : zc
 # @File    : testAddress.py
 import pytest
-
+import allure
 from API.wework.weWorkAddress import WeWorkAddress
 
-
+@allure.feature("执行以下测试用例：")
 class TestAddress:
 
     name1 = '0803update03'
@@ -37,7 +37,7 @@ class TestAddress:
         print("===========case_close===========")
         self.address.delete_member(self.userid)
 
-
+    @allure.story("测试用例：获取成员信息")
     def test_get_infomation(self):
 
         self.address.create_member(self.userid,self.name,self.mobile,self.department)
@@ -48,6 +48,7 @@ class TestAddress:
 
     # 并行插件参数：-n auto，安装pytest-xdist,提高运行用例速度
     @pytest.mark.parametrize("userid, new_name",[("",name1+'_No')]*10)
+    @allure.story("测试用例：更新成员信息")
     def test_update_member(self,userid,new_name):
         print(new_name)
         userid += self.userid
@@ -58,8 +59,7 @@ class TestAddress:
         info = self.address.get_infomation(userid)
         assert info['name'] == new_name
 
-
-
+    @allure.story("测试用例：删除成员信息")
     def test_delete_member(self):
         self.address.create_member(self.userid, self.name, self.mobile, self.department)
         po = self.address.delete_member(self.userid)
