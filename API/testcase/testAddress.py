@@ -46,7 +46,7 @@ class TestAddress:
         print(po)
         assert po.get('name') == self.name,"与返回结果不匹配"
 
-    # 并行插件参数：-n auto，安装pytest-xdist,提高运行用例速度111
+    # 并行插件参数：-n auto，安装pytest-xdist,提高运行用例速度
     @pytest.mark.parametrize("userid, new_name",[("",name1+'_No')]*10)
     def test_update_member(self,userid,new_name):
         print(new_name)
